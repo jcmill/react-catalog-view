@@ -37,7 +37,7 @@
     color: var( --pf-t--global--text--color--subtle);
     text-decoration: none;
     display: block;
-    margin-inline-start: calc(var(--pf-t--global--spacer--md) - 3px);
+    margin-inline-start: calc(var(--pf-t--global--spacer--md) - var(--pf-t--global--border--width--extra-strong));
     padding: var(--pf-t--global--spacer--xs) var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--xs) var(--pf-t--global--spacer--sm);
     vertical-align: top;
     word-break: break-word;
@@ -55,6 +55,7 @@
 
     &:hover,
     &:focus {
+      color: var( --pf-t--global--text--color--regular);
       background-color: var(--pf-t--global--background--color--action--plain--hover);
       text-decoration: none;
 
@@ -77,6 +78,10 @@
   }
 
   &.active {
+    > a {
+      color: var( --pf-t--global--text--color--regular);
+    }
+    
       &::before {
         transition-duration: var(--pf-t--global--motion--duration--fade--default);
         scale: 1 1;
